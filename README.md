@@ -6,7 +6,7 @@ plugin makes an AJAX call to your endpoint.
 ### What is this repository for? ###
 
 * One Click Edit by Curtis Parham
-* Version 1.0
+* Version 0.5
 
 ### How do I get set up? ###
 

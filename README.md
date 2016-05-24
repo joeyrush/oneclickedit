@@ -1,12 +1,10 @@
 # One Click Edit #
+* One Click Edit by Curtis Parham
+* Version 0.5
 
 This is a jQuery plugin that allows for elements to be editable by clicking on them. This
 plugin makes an AJAX call to your endpoint.
 
-### What is this repository for? ###
-
-* One Click Edit by Curtis Parham
-* Version 0.5
 
 ### How do I get set up? ###
 

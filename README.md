@@ -12,7 +12,7 @@ plugin makes an AJAX call to your endpoint.
 
 1. Load plugin after you load jQuery
 
-    ```javascript
+    ```
     <script type="text/javascript" src="/js/one_click_edit.js"></script>
     ```
 
@@ -21,13 +21,13 @@ plugin makes an AJAX call to your endpoint.
     * data-field is the column name in the database to be updated
     * data-input can be 'input' for single line fields or 'textarea' for multi-line fields
 
-    ```html
+    ```
     <h3 id="editHeader" data-id="4" data-field="title" data-input="input">Starting Text</h3>
     ```
 
 3. Add your success function
 
-    ```javascript
+    ```
      function success(resp){
       //handle your response here
       console.log(resp);
@@ -36,7 +36,7 @@ plugin makes an AJAX call to your endpoint.
 
 4. Instantiate your plugin
 
-    ```javascript
+    ```
     $('document').ready(function(){
       // create your options object
       var options = {url:'/parsers/updateParser.php'};

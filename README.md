@@ -17,13 +17,13 @@ plugin makes an AJAX call to your endpoint.
 ```
 
 * Step 2 Add HTML element
+    * data-id attribute is the primary key in the database
+    * data-field is the column name in the database to be updated
+    * data-input can be 'input' for single line fields or 'textarea' for multi-line fields
 
 ```html
 <h3 id="editHeader" data-id="4" data-field="title" data-input="input">Starting Text</h3>
 ```
-    * data-id attribute is the primary key in the database
-    * data-field is the column name in the database to be updated
-    * data-input can be 'input' for single line fields or 'textarea' for multi-line fields
 
 * Step 3 Add your success function
 

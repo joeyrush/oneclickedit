@@ -10,13 +10,13 @@ plugin makes an AJAX call to your endpoint.
 
 ### How do I get set up? ###
 
-1. Load plugin after you load jQuery
+* 1. Load plugin after you load jQuery
 
 ```javascript
   <script type="text/javascript" src="/js/one_click_edit.js"></script>
 ```
 
-2. Add HTML element
+* 2. Add HTML element
     * data-id attribute is the primary key in the database
     * data-field is the column name in the database to be updated
     * data-input can be 'input' for single line fields or 'textarea' for multi-line fields
@@ -25,7 +25,7 @@ plugin makes an AJAX call to your endpoint.
   <h3 id="editHeader" data-id="4" data-field="title" data-input="input">Starting Text</h3>
 ```
 
-3. Add your success function
+* 3. Add your success function
 
 ```javascript
   function success(resp){
@@ -34,7 +34,7 @@ plugin makes an AJAX call to your endpoint.
   }
 ```
 
-4. Instantiate your plugin
+* 4. Instantiate your plugin
 
 ```javascript
   $('document').ready(function(){

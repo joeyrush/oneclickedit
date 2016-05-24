@@ -45,6 +45,6 @@ plugin makes an AJAX call to your endpoint.
     ```
 
     * Options
-      * data - object of additional information to post to parser file
-      * allowNull - boolean to allow for an empty value to be sent. Defaults to False
-      * onblur - this option will allow you to send a callback function instead of using the default AJAX call with success       function
+        * data - object of additional information to post to parser file
+        * allowNull - boolean to allow for an empty value to be sent. Defaults to False
+        * onblur - this option will allow you to send a callback function instead of using the default AJAX call with success       function

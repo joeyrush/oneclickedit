@@ -18,6 +18,10 @@
       var getStyles = ['padding','margin','font','background-color','color','display','width','height','resize'];
       var className = $(this).attr('class');
       var idName = $(this).attr('id');
+      if(typeof idName === 'undefined'){
+        idName = randomString(17);
+        jQuery(prev_el).attr('id',idName);
+      }
       for(var i = 0;i < getStyles.length;i++){
         var k = getStyles[i];
         var v = $(this).css(getStyles[i]);
@@ -39,10 +43,12 @@
         for(var k in styles){
           styleString += k +':'+styles[k]+';';
         }
+        // replace double quotes with single quotes.
+        var newStyleString = styleString.replace(/\"/g,"'");
         if(typeof inputType === 'undefined' || inputType == 'textarea'){
-          var newElement = '<textarea id="'+idName+'" class="'+className+'" style="'+styleString+'">'+prev_val+'</textarea>';
+          var newElement = '<textarea id="'+idName+'" class="'+className+'" style="'+newStyleString+'">'+prev_val+'</textarea>';
         }else if(inputType == 'input'){
-          var newElement = '<input id="'+idName+'" class="'+className+'" style="'+styleString+'" value="'+prev_val+'">';
+          var newElement = '<input id="'+idName+'" class="'+className+'" style="'+newStyleString+'" value="'+prev_val+'">';
         }
         $(this).replaceWith(newElement);
         $('#'+idName).focus();
@@ -76,7 +82,6 @@
             }
           }
 
-
           // replace with previous element populated with new value
           $(prev_el).attr('style','');
           $(prev_el).text(newVal);
@@ -91,5 +96,12 @@
       });
     });
   };
+
+  function randomString(length) {
+    var result = '';
+    var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
+  }
 
 }(jQuery));

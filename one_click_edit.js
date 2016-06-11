@@ -39,7 +39,7 @@
 
       // replace element on click with textarea or input
       $(this).on('click',function(){
-        styleString = 'border-color:transparent;background-color:#fff;width:'+styles["width"]+'px;height:'+styles["height"]+';';
+        styleString = 'border-color:transparent;background-color:#fff;width:'+styles["width"]+'px;height:'+styles["height"]+';outline:none;border:1px solid #4D90FE;box-shadow:0px 0px 4px 0px #4D90FE;';
         for(var k in styles){
           styleString += k +':'+styles[k]+';';
         }
